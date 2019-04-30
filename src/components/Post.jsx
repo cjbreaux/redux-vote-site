@@ -21,7 +21,21 @@ function Post(props) {
     dispatch(action);
   }
 
+  function voteDown() {
+    const { dispatch } = props;
+    const action = {
+      type: 'VOTE_DOWN',
+      id: props.id,
+      title: props.title,
+      text: props.text,
+      date: props.date,
+      upVotes: props.upVotes,
+      downVotes: props.downVotes
+    }
+    dispatch(action)
 
+
+  }
 
   return(
     <div>
@@ -31,7 +45,7 @@ function Post(props) {
         <p>content: {props.text}</p>
         <p>date: {props.date}</p>
         <button onClick={voteUp}>Up Boatz {props.upVotes}</button>
-        <button>Down Boatz {props.downVotes}</button>
+        <button onClick={voteDown}>Down Boatz {props.downVotes}</button>
       </div>
     </div>
 
