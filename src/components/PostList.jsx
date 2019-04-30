@@ -6,7 +6,8 @@ import Post from './Post';
 
 
 function PostList(props) {
- console.log(props);
+
+
 
 
   return(
@@ -15,8 +16,10 @@ function PostList(props) {
         let post = props.postList[postId];
         return <Post title={post.title}
           text={post.text}
-          postId={post.id}
+          id={post.id}
           date={post.date}
+          upVotes={post.upVotes}
+          downVotes={post.downVotes}
           key={postId} />;
       })}
     </div>
@@ -28,8 +31,8 @@ function PostList(props) {
 const mapStateToProps = state => {
   return {
     postList: state
-  }
-}
+  };
+};
 
 
 
