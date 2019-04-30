@@ -55,8 +55,8 @@ Post.propTypes = {
   dispatch: PropTypes.func,
   id: PropTypes.string,
   title: PropTypes.string,
-  text: PropTypes.text,
-  date: PropTypes.text,
+  text: PropTypes.string,
+  date: PropTypes.string,
   upVotes: PropTypes.number,
   downVotes: PropTypes.number
 

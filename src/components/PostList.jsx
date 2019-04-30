@@ -8,9 +8,6 @@ import PropTypes from 'prop-types';
 
 function PostList(props) {
 
-
-
-
   return(
     <div>
       {Object.keys(props.postList).map(function(postId){
@@ -24,9 +21,7 @@ function PostList(props) {
           key={postId} />;
       })}
     </div>
-
   );
-
 }
 
 const mapStateToProps = state => {
