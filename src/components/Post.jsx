@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 
 
 
@@ -31,8 +32,8 @@ function Post(props) {
       date: props.date,
       upVotes: props.upVotes,
       downVotes: props.downVotes
-    }
-    dispatch(action)
+    };
+    dispatch(action);
 
 
   }
@@ -48,12 +49,17 @@ function Post(props) {
         <button onClick={voteDown}>Down Boatz {props.downVotes}</button>
       </div>
     </div>
-
-
-
-
   );
-
 }
+Post.propTypes = {
+  dispatch: PropTypes.func,
+  id: PropTypes.string,
+  title: PropTypes.string,
+  text: PropTypes.text,
+  date: PropTypes.text,
+  upVotes: PropTypes.number,
+  downVotes: PropTypes.number
+
+};
 
 export default connect()(Post);

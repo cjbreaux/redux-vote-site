@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import Post from './Post';
+import PropTypes from 'prop-types';
 
 
 
@@ -34,6 +35,9 @@ const mapStateToProps = state => {
   };
 };
 
-
+PostList.propTypes = {
+  dispatch: PropTypes.func,
+  postList: PropTypes.object
+};
 
 export default connect(mapStateToProps)(PostList);

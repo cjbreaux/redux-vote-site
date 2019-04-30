@@ -9,9 +9,9 @@ import postListReducer from './reducers/post-list-reducer';
 const store = createStore(postListReducer);
 
 
-let subscribe = store.subscribe(()=>
-  console.log(store.getState())
-);
+// let subscribe = store.subscribe(()=>
+//   console.log(store.getState())
+// );
 
 
 

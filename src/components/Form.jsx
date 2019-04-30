@@ -1,6 +1,7 @@
 import React from 'react';
 import { v4 } from 'UUID';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 
 function Form(props) {
   let _postTitle = null;
@@ -32,5 +33,9 @@ function Form(props) {
     </div>
   );
 }
+
+Form.propTypes = {
+  dispatch: PropTypes.func
+};
 
 export default connect()(Form);
