@@ -3,20 +3,14 @@ import React from 'react';
 
 
 
-function Post() {
-
-
-
-
+function Post(props) {
   return(
     <div>
       <h1>HALLO</h1>
       <div>
-        <h2>Author</h2>
-        <h2>title</h2>
-        <p>content</p>
-
-
+        <h2>title: {props.title}</h2>
+        <p>content: {props.text}</p>
+        <p>date: {props.date}</p>
       </div>
     </div>
 

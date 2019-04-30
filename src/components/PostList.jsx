@@ -10,7 +10,16 @@ function PostList(props) {
 
 
   return(
-    <Post />
+    <div>
+      {Object.keys(props.postList).map(function(postId){
+        let post = props.postList[postId];
+        return <Post title={post.title}
+          text={post.text}
+          postId={post.id}
+          date={post.date}
+          key={postId} />;
+      })}
+    </div>
 
   );
 
@@ -18,7 +27,7 @@ function PostList(props) {
 
 const mapStateToProps = state => {
   return {
-    abcPostList: state
+    postList: state
   }
 }
 

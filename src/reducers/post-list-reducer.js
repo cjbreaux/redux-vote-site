@@ -7,7 +7,7 @@ export default (state = {}, action) => {
         title,
         text,
         id,
-        date: new Date()
+        date: new Date().toString()
       }
     });
     return newState;
