@@ -7,7 +7,6 @@ import PropTypes from 'prop-types';
 
 
 function PostList(props) {
-
   return(
     <div>
       {Object.keys(props.postList).map(function(postId){
@@ -25,8 +24,12 @@ function PostList(props) {
 }
 
 const mapStateToProps = state => {
+  let objectArray = Object.values(state);
+  objectArray.sort((a,b) => b.upVotes - a.upVotes);
+  console.log(...objectArray);
+  let newList = [...objectArray]
   return {
-    postList: state
+    postList: newList
   };
 };
 
